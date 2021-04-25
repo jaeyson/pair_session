@@ -1,18 +1,6 @@
 defmodule PairSession do
-  @moduledoc """
-  Documentation for `PairSession`.
-  """
+  alias PairSession.Functions
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> PairSession.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  defdelegate chunker(list, chunk_by), to: Functions
+  defdelegate reverse_string(string), to: Functions
 end
